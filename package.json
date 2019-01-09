@@ -1,0 +1,52 @@
+{
+  "name": "daskeyboard-applet--resource-usage",
+  "displayName": "Resource Usage",
+  "version": "1.0.0",
+  "description": "Displays computer information on a Das Keyboard Q device",
+  "longDescription": "Keep an eye on four computer resources on your Q keyboard",
+  "officialProductName": "Resource Usage",
+  "appUrl": "",
+  "isSingleton": true,
+  "publisher": "Das Keyboard",
+  "videoUrl": "",
+  "icon": "assets/icon.png",
+  "image": "assets/image-missing.png",
+  "publisherName": "Das Keyboard",
+  "authorName": "Das Keyboard",
+  "authorUrl": "https://twitter.com/daskeyboard",
+  "issuesUrl": "https://github.com/daskeyboard/daskeyboard-applet--ram-usage/issues",
+  "homePageUrl": "https://github.com/daskeyboard/daskeyboard-applet--ram-usage",
+  "developerRepoUrl": "https://github.com/daskeyboard/daskeyboard-applet--ram-usage",
+  "licenseUrl": "http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt",
+  "changelogUrl": "CHANGELOG.md",
+  "readMeUrl": "README.md",
+  "readMeEndUserUrl": "README_ENDUSER.md",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "engines": {
+    "das-keyboard-q": "3.1.0"
+  },
+  "dependencies": {
+    "daskeyboard-applet": "2.10.6",
+    "mocha": "^5.2.0",
+    "os-utils": "0.0.14",
+    "request": "^2.88.0",
+    "systeminformation": "^3.49.3"
+  },
+  "qConfig": {
+    "geometry": {
+      "width": 4,
+      "height": 1,
+      "defaults": {
+        "origin": {
+          "x": 1,
+          "y": 1
+        }
+      }
+    }
+  }
+}
