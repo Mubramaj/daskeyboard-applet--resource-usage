@@ -1,16 +1,16 @@
-# Q Applet: RAM Usage
+# Q Applet: Resource Usage
 
-Displays the RAM usage on a Das Keyboard Q Series.
+Displays the percentage of four computer activities.
 
-[GitHub repository](https://github.com/daskeyboard/daskeyboard-applet--ram-usage)
+[GitHub repository](https://github.com/daskeyboard/daskeyboard-applet--resource-usage)
 
 ## Example
 
-Displays the percentage of memory used with the following colors: greens &lt; 50%, yellow &lt; 70%, orange &lt; 85% and red 85% and above.
+Displays the percentage of memory used with the following colors:
 
-Example with 50% memory used :
+Example :
 
-![RAM Usage on a Das Keybaord Q](assets/image.png "Q RAM usage")
+![Resource Usage on a Das Keyboard Q](assets/image.png "Q Resource Usage")
 
 ## Changelog
 
