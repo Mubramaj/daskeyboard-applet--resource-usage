@@ -60,7 +60,7 @@ class ResourceUsage extends q.DesktopApp {
       si.fsStats(cb1 => {
         si.blockDevices(cb2 => {
           // TODO
-          // Check WIN compatibility
+          // Check WIN compatibility cb1 tx
           var diskUsage = Number(Number((cb1.tx/cb2[0].size)*100).toFixed(2));
           resolve(diskUsage);
         });
@@ -73,15 +73,21 @@ class ResourceUsage extends q.DesktopApp {
       si.networkInterfaces(cb1 => {
         si.networkStats(cb2 => {
           // TODO 
-          // Check what is the used connection
-          // Check MAC compatibility
+          // Check MAC compatibility for cb1 speed
           console.log("------1--------");
           console.log(cb1);
           console.log("------2--------");
           console.log(cb2);
-          var maxSpeed = (cb1[1].speed)*1000000; // MBit/s converted to Bit/s
-          var currentSpeed = cb2[0].rx_sec + cb2[0].tx_sec; // Bit/s
-          var networkUsage = Number((currentSpeed/maxSpeed)*100).toFixed(2);
+          var i;
+          for (i = 0; i < cb1.length; i++) { 
+            if(cb1[i].iface==cb2[0].iface){
+              // Get maxSpeed MBit/s converted to Bit/s
+              var maxSpeed = (cb1[1].speed)*1000000; 
+              // Get currentSpeed Bit/s
+              var currentSpeed = cb2[0].rx_sec + cb2[0].tx_sec; 
+              var networkUsage = Number((currentSpeed/maxSpeed)*100).toFixed(2);
+            }
+          }
           resolve(networkUsage);
         });        
       });
