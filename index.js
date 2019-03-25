@@ -28,7 +28,7 @@ class ResourceUsage extends q.DesktopApp {
             return new q.Signal({
               points: [this.generatePoints(cpuUsage, ramUsage, diskUsage, networkUsage)],
               name: "Resource Usage",
-              message: "CPU Usage: "+cpuUsage+"%"+"\n"+"RAM Usage: "+ramUsage+"%"+"\n"+"Disk Usage: "+diskUsage+"%"+"\n"+"Network Usage: "+networkUsage+"%",
+              message: "CPU Usage: "+cpuUsage+"%"+"<br>"+"RAM Usage: "+ramUsage+"%"+"<br>"+"Disk Usage: "+diskUsage+"%"+"<br>"+"Network Usage: "+networkUsage+"%",
               isMuted: true, // don't flash the Q button on each signal
             });
           });
