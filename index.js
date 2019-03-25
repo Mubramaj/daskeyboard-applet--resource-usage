@@ -72,12 +72,6 @@ class ResourceUsage extends q.DesktopApp {
     return new Promise((resolve) => {
       si.networkInterfaces(cb1 => {
         si.networkStats(cb2 => {
-          // TODO 
-          // Check MAC compatibility for cb1 speed
-          console.log("------1--------");
-          console.log(cb1);
-          console.log("------2--------");
-          console.log(cb2);
           var i;
           for (i = 0; i < cb1.length; i++) { 
             if(cb1[i].iface==cb2[0].iface){
@@ -128,32 +122,32 @@ class ResourceUsage extends q.DesktopApp {
         break;
 
       case percent <= 50:
-        // return second color
+        // return fifth color
         color = colors[4];
         break;
 
       case percent <= 60:
-        // return second color
+        // return sixth color
         color = colors[5];
         break;
 
       case percent <= 70:
-        // return first color
+        // return seventh color
         color = colors[6];
         break;
 
       case percent <= 80:
-        // return second color
+        // return eighth color
         color = colors[7];
         break;
 
       case percent <= 90:
-        // return second color
+        // return ninth color
         color = colors[8];
         break;
 
       case percent <= 100:
-        // return second color
+        // return tenth color
         color = colors[9];
         break;
 
