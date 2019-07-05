@@ -60,7 +60,7 @@ class ResourceUsage extends q.DesktopApp {
       si.fsStats(cb1 => {
         si.blockDevices(cb2 => {
           // TODO
-          // Check WIN compatibility cb1 tx
+          // Check WIN compatibility cb1 tx: https://www.npmjs.com/package/systeminformation
           var diskUsage = Number(Number((cb1.tx/cb2[0].size)*100).toFixed(2));
           resolve(diskUsage);
         });
